@@ -1,5 +1,5 @@
-import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { CurrencyPipe, DecimalPipe, PercentPipe } from '@angular/common';
 
 @Component({
   selector: 'app-numbers-page',
