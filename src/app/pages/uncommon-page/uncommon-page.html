@@ -6,8 +6,8 @@
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
 
   <app-card title="i18nSelectPipe">
-    <p>hola  mundo desde el padre</p>
-    <button class="btn btn-warning">Click me</button>
+    <p>Saludos {{ client().name }}, es un placer {{ client().gender | i18nSelect: invitationMap }} a nuestro evento</p>
+    <button  class="btn btn-warning" (click)="changeClient()">Cambiar Cliente</button>
   </app-card>
 
 </div>
