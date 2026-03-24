@@ -1,4 +1,4 @@
-import { I18nPluralPipe, I18nSelectPipe, JsonPipe, SlicePipe, UpperCasePipe } from '@angular/common';
+import { I18nPluralPipe, I18nSelectPipe, JsonPipe, KeyValuePipe, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Card } from './../../components/card/card';
 import { Component, signal } from '@angular/core';
 
@@ -20,7 +20,7 @@ const client2 = {
 @Component({
   selector: 'app-uncommon-page',
   imports: [
-    Card, I18nSelectPipe, I18nPluralPipe, SlicePipe, JsonPipe, UpperCasePipe
+    Card, I18nSelectPipe, I18nPluralPipe, SlicePipe, JsonPipe, UpperCasePipe, KeyValuePipe, TitleCasePipe
   ],
   templateUrl: './uncommon-page.html',
 })
@@ -56,5 +56,13 @@ export  default class UncommonPage {
   deleteClient(){
     this.clients.update((prev) => prev.slice(1));
   }
+
+  //KeyValue Pipe
+  profile = {
+    name : 'Carlos',
+    age : 44,
+    addrrss: 'Toluca, México',
+  }
+
 
 }
